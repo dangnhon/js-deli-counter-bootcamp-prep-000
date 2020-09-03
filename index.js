@@ -2,12 +2,25 @@ var katzDeliLine = [];
 
 var customer = [];
 
-function takeANumber(katzDeliLine, customer) {
+// function takeANumber(katzDeliLine, customer) {
+  
+//   katzDeliLine.push(customer);
+  
+//   return("Welcome, " + customer + ". You are number " + katzDeliLine.length + " in line.");
+// }
+var customer = 0;
+
+function takeANumber(katzDeliLine) {
+  
+  
+  customer++;
+  
   katzDeliLine.push(customer);
-  return("Welcome, " + customer + ". You are number " + katzDeliLine.length + " in line.");
+  console.log
+  return("Welcome customer number: " + customer)
+  
+  
 }
-
-
 
 function nowServing(katzDeliLine) {
 
@@ -26,6 +39,7 @@ function currentLine(katzDeliLine) {
   var lineNumberAndCustomer = [];
   
   for (let i = 0; i < katzDeliLine.length; i++) {
+    
     lineNumberAndCustomer += (i + 1) + ". " + katzDeliLine[i] + ", ";
   }
     
@@ -36,6 +50,7 @@ if (katzDeliLine.length === 0) {
   } else {
   
   lineNumberAndCustomer = lineNumberAndCustomer.slice(0, lineNumberAndCustomer.length-2);
+  
   return("The line is currently: " + lineNumberAndCustomer);
   
   }
